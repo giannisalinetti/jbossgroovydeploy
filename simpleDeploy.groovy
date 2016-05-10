@@ -36,7 +36,7 @@ if (deployMode.toString() == "rollout") {
 
 // Define and print outcome string for deploy.
 response = result.getResponse()
-deployOutcome = response.get().asString()
+deployOutcome = response.get().toJSONString(false)
 println deployOutcome
 
 // Close connection
