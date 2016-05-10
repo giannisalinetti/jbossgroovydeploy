@@ -21,6 +21,8 @@ cli.connect()            // INFO messages are produced to stderr
 
 // Use these connect method for remoting
 // cli.connect(String controllerHost, int controllerPort, String username, char[] password)
+// The password field is a Char Array and must be converted from string
+// Example: cli.connect("myhost", 9999, "admin", "mypass".toCharArray()
 
 // Artifact deployment
 if (deployMode.toString() == "rollout") {
