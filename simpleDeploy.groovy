@@ -15,7 +15,12 @@ def deployMode = args[4]
 
 // New cli instance
 cli = CLI.newInstance()
-cli.connect()            // Remove info messages
+
+// Use this connect method for local
+cli.connect()            // INFO messages are produced to stderr
+
+// Use these connect method for remoting
+// cli.connect(String controllerHost, int controllerPort, String username, char[] password)
 
 // Artifact deployment
 if (deployMode.toString() == "rollout") {
